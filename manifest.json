@@ -1,0 +1,22 @@
+{
+    "name": "Pivotal Tracker Actions",
+    "version": "1.0",
+    "description": "Disable certain action buttons on Pivotal tracker",
+    "permissions": ["*://www.pivotaltracker.com/*", "tabs", "declarativeContent", "storage", "webNavigation"],
+    "content_scripts": [
+     {
+       "matches": ["*://www.pivotaltracker.com/*"],
+       "run_at": "document_idle",
+       "js": ["contentscript.js"]
+     }
+   ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "page_action": {
+
+    },
+
+    "manifest_version": 2
+}
