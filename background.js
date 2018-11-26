@@ -2,10 +2,6 @@
 
 chrome.runtime.onInstalled.addListener(function() {
 
-  // chrome.storage.sync.get(['mode'], function(result) {
-  //   result.mode
-  // })
-
   chrome.pageAction.onClicked.addListener(function() {
     chrome.storage.sync.get(['mode'], function(result) {
       let mode = result.mode || 'developer'
@@ -25,7 +21,7 @@ chrome.runtime.onInstalled.addListener(function() {
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
       chrome.declarativeContent.onPageChanged.addRules([{
         conditions: [new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {hostEquals: 'www.pivotaltracker.com'},
+          pageUrl: { hostEquals: 'www.pivotaltracker.com' },
         })
         ],
             actions: [new chrome.declarativeContent.ShowPageAction()]

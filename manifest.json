@@ -14,9 +14,6 @@
       "scripts": ["background.js"],
       "persistent": false
     },
-    "page_action": {
-
-    },
-
+    "page_action": { },
     "manifest_version": 2
 }
