@@ -3,6 +3,8 @@ Since Pivotal Tracker lacks of access control, this chrome extension is to disab
 
 **Click the extension icons will enable/disable these actions.**
 
+![alt text](https://github.com/moony-chen/PTAlert/raw/master/screenshot.png "")
+
 ## Installation
 1. Clone this repo.
 2. Open the Extension Management page by navigating to chrome://extensions.
