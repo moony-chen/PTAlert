@@ -27,7 +27,6 @@ function setup() {
 
   chrome.storage.sync.get(['mode'], function(result) {
     let mode = result.mode || 'developer'
-    // setTimeout(function(){ setButtonsStatus(mode === 'full') })
     init(mode === 'full')
   })
   chrome.storage.onChanged.addListener(function(changes, namespace) {
@@ -38,6 +37,6 @@ function setup() {
 
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", setup);
-} else {  // `DOMContentLoaded` already fired
+} else {
     setup();
 }
